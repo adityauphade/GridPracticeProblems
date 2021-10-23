@@ -1,0 +1,115 @@
+:root{
+    --main-padding: 10px;
+    --main-round: 10px
+}
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.5fr 1fr 2.5fr 1fr;
+    grid-template-areas: 
+    "one two two three four"
+    "five two two three six"
+    "seven eight nine three ten"
+    "eleven eleven eleven three twelve";
+
+    grid-gap: 10px;
+}
+#one{
+    background-color: #EEE77C;
+    grid-area: one;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+
+}
+#two{
+    background-color: #EAE154;
+    grid-area: two;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+}
+#three{
+    background-color: #E7BF55;
+    grid-area: three;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+}
+#four{
+    background-color: #E7A455;
+    grid-area: four;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+}
+#five{
+    background-color: #E78B55;
+    grid-area: five;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+}
+#six{
+    background-color: #F17F3C;
+    grid-area: six;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+}
+#seven{
+    background-color: #EE624D;
+    grid-area: seven;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+}
+#eight{
+    background-color: #F24D34;
+    grid-area: eight;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+}
+#nine{
+    background-color: #FF2200;
+    grid-area: nine;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+}
+#ten{
+    background-color: #B88621;
+    grid-area: ten;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+}
+#eleven{
+    background-color: #C1400D;
+    grid-area: eleven;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+}
+#twelve{
+    background-color: #B31919;
+    grid-area: twelve;
+    border-radius: var(--main-round);
+    padding: var(--main-padding);
+}
+
+@media screen and (max-width: 575px) {
+    .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr 2.5fr 1fr 2fr 3fr;
+        grid-template-areas: 
+        "one one one one"
+        "two two two three"
+        "four four five five"
+        "six seven eight eight"
+        "nine nine nine ten"
+        "eleven eleven eleven eleven"
+        "twelve twelve twelve twelve";
+    }
+    
+}
